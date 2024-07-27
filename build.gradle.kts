@@ -47,7 +47,6 @@ base.archivesName.set(pluginId)
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-
     withSourcesJar()
     withJavadocJar()
 }
