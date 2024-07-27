@@ -45,7 +45,7 @@ jobs:
         run: ./gradlew test -x checkLicenses
 
       - name: Publish
-        if: ${{ github.repository == 'TeamGalacticraft/mojarn' && success() }}
+        if: ${{ github.repository == 'SebaSphere/mojarn' && success() }}
         run: ./gradlew publish
         env:
           NEXUS_REPOSITORY_URL: ${{ secrets.NEXUS_RELEASE_URL }}
