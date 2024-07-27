@@ -109,6 +109,7 @@ gradlePlugin {
 }
 
 publishing {
+
     repositories {
         if (System.getenv().containsKey("NEXUS_REPOSITORY_URL")) {
             maven(System.getenv("NEXUS_REPOSITORY_URL")!!) {
