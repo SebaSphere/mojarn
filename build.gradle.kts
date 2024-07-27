@@ -110,9 +110,8 @@ gradlePlugin {
 
 publishing {
     repositories {
-        val nexusUrl = System.getenv("NEXUS_REPOSITORY_URL")
-        if (nexusUrl != null && !nexusUrl.startsWith("file")) {
-            maven(nexusUrl) {
+        if (System.getenv().containsKey("NEXUS_REPOSITORY_URL")) {
+            maven(System.getenv("https://" + "NEXUS_REPOSITORY_URL")!!) {
                 credentials {
                     username = System.getenv("NEXUS_USER")
                     password = System.getenv("NEXUS_PASSWORD")
